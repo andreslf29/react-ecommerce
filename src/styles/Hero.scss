@@ -4,7 +4,27 @@
     @include dja(center,left);
     flex-direction: column;
     padding: 5% 10%;
-    background: $gradiente;
+    background: url("https://i.ibb.co/fn3yqjb/banner.jpg") no-repeat center/cover;
     height: 100vh;
     width: 100%;
+    color: $blanco;
+
+    h1{
+        font-size: 3rem;
+        line-height: 3rem;
+        max-width: 40%;
+    }
+
+    p{
+        margin-top: 1em;
+        font-size: 1.2rem;
+        line-height: 1.4rem;
+        max-width: 40%;
+    }
 }
+
+
+  .block{
+      display: block;
+  }
+  

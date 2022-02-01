@@ -1,10 +1,13 @@
 @import '_vars', '_mixin';
 
+.nav{
+    @include dja(center, center);
+}
 .nav ul{
     @include dja(center, center);
     color: $blanco;
-    font-size: 1.2rem;
-    line-height: 1.2rem;
+    font-size: 1.1rem;
+    line-height: 1.1rem;
 
     a{
         margin: 0 .5em;

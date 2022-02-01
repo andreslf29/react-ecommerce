@@ -1,5 +1,7 @@
 import React from "react";
 import "../styles/Navbar.scss";
+import "./CartWidget"
+import CartWidget from "./CartWidget";
 
 const Navbar = () => {
   return (
@@ -31,6 +33,7 @@ const Navbar = () => {
           </a>
         </li>
       </ul>
+      <CartWidget />
     </nav>
   );
 };
