@@ -1,13 +1,11 @@
 import React from 'react';
 import '../styles/ItemListContainer.scss'
 
-const ItemListContainer = (greeting) => {
-
-  greeting = "Pronto conoceras nuestro catálogo de productos...";
+const ItemListContainer = (props) => {
 
   return (
       <div className='itemListContainer'>
-      {greeting}
+      {props.greeting}
       
       </div>
       

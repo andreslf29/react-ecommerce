@@ -9,7 +9,7 @@ function App() {
     <div>
       <Header />
       <Hero />
-      <ItemListContainer />
+      <ItemListContainer greeting="hola soy un gretting"/>
     </div>
   );
 }
