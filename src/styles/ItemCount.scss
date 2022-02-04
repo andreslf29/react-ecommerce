@@ -1,0 +1,55 @@
+@import "vars","_mixin";
+
+.contenedor__contador{
+    @include dja(center,center);
+    flex-direction: column;
+    padding: 1em;
+    border-radius: 25px;
+    color: $blanco;
+    background-color: $negro;
+
+    .agg{
+        outline: none;
+        background-color: transparent;
+        margin-top: 1em;
+        border: 2px solid $azul;
+        border-radius: 25px;
+        padding: .5em .75em;
+        font-size: 1rem;
+
+        &:hover{
+            background-color: $azul;
+            color: $negro;
+            transform: scale(1.05);
+            cursor: pointer;
+            transition: all .2s ease-in-out;
+        }
+    }
+}
+
+.mas-menos{
+    display: flex;
+    @include dja(space-around,center);
+    width: 100%;
+
+    button{
+        outline: none;
+        display: flex;
+        align-items: center;
+        background-color: transparent;
+        color: $azul;
+        font-size: 2rem;
+        border: none;
+
+        &:hover{
+            cursor: pointer;
+        }
+    }
+
+    p{
+        font-weight: 700;
+    }
+}
+
+
+
