@@ -27,6 +27,11 @@ a, p, section,div, main,ul, .container, .container-fluid, .row {
         color: inherit;
 }
 
+a:hover{
+    text-decoration: none;
+    color: inherit;
+}
+
 body{
     font-family: 'Poppins', sans-serif;
 }
