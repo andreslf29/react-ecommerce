@@ -6,11 +6,13 @@
     padding: .25em;
     border-radius: 25px;
     color: $negro;
+    max-width: fit-content;
+
 
     .agg{
         outline: none;
         background-color: transparent;
-        margin-top: .15em;
+        margin-top: 1em;
         border: 2px solid $azul;
         border-radius: 25px;
         padding: .5em .75em;
