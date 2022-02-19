@@ -8,10 +8,10 @@ const ItemDetail = ({ data }) => {
   return (
     <>
       <div className="row bg-light p-5">
-        <div className="col-md-6 cardDetail">
+        <div className="col-md-6 col-12 cardDetail">
           <img src={imagen} alt={nombre} />
         </div>
-        <div className="col-md-6 cardDetail">
+        <div className="col-md-6 col-12 cardDetail">
           <h1>{nombre}</h1>
           <p>{descripcion}</p>
           <p className="precio">${precio}</p>

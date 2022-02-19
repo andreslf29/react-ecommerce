@@ -1,4 +1,4 @@
-const getItemService = async (id = 1) => {
+const getItemService = async (id) => {
     try {
       const response = await fetch(
         `https://617f6aa3055276001774fa8b.mockapi.io/api/v1/productos/${id}`,

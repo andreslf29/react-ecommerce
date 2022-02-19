@@ -31,7 +31,7 @@ const ItemCount = ({initial, stock}) => {
                     <p>{count}</p>
                 <button onClick={restar}><Icon icon="akar-icons:circle-minus" /></button>
             </div>
-            <button onClick={onAdd} className='agg'>Agregar al carrito</button>    
+            <button onClick={onAdd} className='boton'>Agregar al carrito</button>    
         </div>      
     );
 };

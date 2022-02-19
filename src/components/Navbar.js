@@ -2,39 +2,40 @@ import React from "react";
 import "../styles/Navbar.scss";
 import "./CartWidget"
 import CartWidget from "./CartWidget";
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   return (
     <nav className="nav">
       <ul>
         <li className="link-wrapper">
-          <a href="/" className="link hover-blue">
+          <Link to="/" className="link hover-blue">
             Inicio
-          </a>
+          </Link>
         </li>
         <li className="link-wrapper">
-          <a href="/" className="link hover-blue">
+          <Link to="/categoria/xiaomi" className="link hover-blue">
             Xiaomi
-          </a>
+          </Link>
         </li>
         <li className="link-wrapper">
-          <a href="/" className="link hover-blue">
+          <Link to="/categoria/realme" className="link hover-blue">
             Realme
-          </a>
+          </Link>
         </li>
         <li className="link-wrapper">
-          <a href="/" className="link hover-blue">
+          <Link to="/categoria/samsung" className="link hover-blue">
             Samsung
-          </a>
+          </Link>
         </li>
         <li className="link-wrapper">
-          <a href="/" className="link hover-blue">
+          <Link to="/categoria/apple" className="link hover-blue">
             Apple
-          </a>
+          </Link>
         </li>
       </ul>
       <CartWidget />
-    </nav>
+    </nav>    
   );
 };
 

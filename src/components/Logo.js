@@ -1,11 +1,12 @@
 import React from "react";
 import "../styles/Logo.scss";
+import { Link } from "react-router-dom";
 
 const Logo = () => {
   return (
-    <a href="/" className="logo">
+    <Link to="/" className="logo">
       Intercel
-    </a>
+    </Link>
   );
 };
 

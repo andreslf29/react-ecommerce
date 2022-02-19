@@ -4,11 +4,14 @@ import Navbar from "./Navbar";
 import "../styles/Header.scss";
 
 const Header = () => {
+
   return (
-    <header className="header">
-      <Logo />
-      <Navbar />
-    </header>
+    <>
+      <header className="header">
+        <Logo />
+        <Navbar />
+      </header>
+    </>
   );
 };
 
