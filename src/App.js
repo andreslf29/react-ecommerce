@@ -3,9 +3,11 @@ import "./styles/App.scss";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import Cart from "./components/Cart";
 import Hero from "./components/Hero";
 import ItemListContainer from "./containers/ItemListContainer";
 import ItemDetailContainer from "./containers/ItemDetailContainer";
+
 
 function App() {
   return (
@@ -20,6 +22,7 @@ function App() {
             element={<ItemListContainer />}
           />
           <Route path="/item/:id" element={<ItemDetailContainer />} />
+          <Route path="/cart" element={<Cart />} />
           <Route path="*" element={<>NOT FOUND</>} />
         </Routes>
         <Footer />

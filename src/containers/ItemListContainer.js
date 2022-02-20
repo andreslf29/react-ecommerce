@@ -167,7 +167,7 @@ import { useParams } from "react-router";
 export default function ItemListContainer() {
   //Iniciar estado en array[]
   let { categoryid } = useParams();
-  console.log({ categoryid });
+  //console.log({ categoryid });
   const [items, setItems] = useState([]);
 
   //encapsular el llamdo de la promesa en useEffect

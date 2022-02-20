@@ -1,8 +1,9 @@
 import React, {useState} from 'react';
+import { Link } from 'react-router-dom';
 import { Icon } from '@iconify/react';
 import '../styles/ItemCount.scss'
 
-const ItemCount = ({initial, stock}) => {
+const ItemCount = ({initial, stock, onAdd}) => {
     let [count, setCount] = useState(initial);
 
     const sumar = () => {
@@ -18,11 +19,6 @@ const ItemCount = ({initial, stock}) => {
             setCount(count - 1)
         }
     }
-
-    const onAdd = () => {
-        //alert(`Se añadieron ${count} artículos al carrito`);
-        alert(`Se añadieron${count}articulos al carrito`)
-    }
  
   return (
         <div className='contenedor__contador'>
@@ -31,7 +27,8 @@ const ItemCount = ({initial, stock}) => {
                     <p>{count}</p>
                 <button onClick={restar}><Icon icon="akar-icons:circle-minus" /></button>
             </div>
-            <button onClick={onAdd} className='boton'>Agregar al carrito</button>    
+            <button onClick={() => onAdd(count)} className='boton'>Agregar al carrito</button> 
+           
         </div>      
     );
 };
