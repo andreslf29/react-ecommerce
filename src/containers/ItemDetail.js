@@ -3,11 +3,13 @@ import { Link } from "react-router-dom";
 import ItemCount from "../components/ItemCount";
 import { Icon } from "@iconify/react";
 import "../styles/ItemDetail.scss";
+import useCartcontext from "../context/CartContext";
 
 const ItemDetail = ({ data }) => {
   const { nombre, id, imagen, descripcion, precio, stock } = data;
 
   let [inCart, setInCart] = React.useState(false);
+  const { quantity } = useCartcontext;
 
   const onAdd = (count) => {
     setInCart(true);
