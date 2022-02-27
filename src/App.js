@@ -7,7 +7,7 @@ import Cart from "./components/Cart";
 import Hero from "./components/Hero";
 import ItemListContainer from "./containers/ItemListContainer";
 import ItemDetailContainer from "./containers/ItemDetailContainer";
-import { CartContextProvider } from "./context/CartContext";
+import  {CartContextProvider}  from "./context/CartContext";
 
 
 function App() {

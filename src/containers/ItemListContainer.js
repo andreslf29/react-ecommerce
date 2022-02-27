@@ -2,6 +2,7 @@ import React, {useState, useEffect} from "react";
 import "../styles/ItemListContainer.scss";
 import ItemList from "./ItemList";
 import { useParams } from "react-router";
+import Loader from "../components/Loader";
 //import ItemCount from "../components/ItemCount";
 
 
@@ -169,6 +170,7 @@ export default function ItemListContainer() {
   let { categoryid } = useParams();
   //console.log({ categoryid });
   const [items, setItems] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   //encapsular el llamdo de la promesa en useEffect
   useEffect(() => {
@@ -177,6 +179,7 @@ export default function ItemListContainer() {
     //ejecuta then despues de la promesa. Guardar los satos recibidos en el estado
     requestDatos
       .then((itemsPromise) => {
+        setIsLoading(false);
         setItems(itemsPromise);
       })
       .catch((errorMsg) => {
@@ -189,7 +192,7 @@ export default function ItemListContainer() {
   return (
     
     <section className="container-fluid row">
-      <ItemList items={items} />
+      {isLoading ? <Loader />  : <ItemList items={items} />}
     </section>
     );
 }

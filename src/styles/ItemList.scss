@@ -1,5 +1,8 @@
 @import '_vars';
 
-// .itemList{
-//     padding: 2.5% 5% !important;
-// }
+.itemList{
+    padding: 5% 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
