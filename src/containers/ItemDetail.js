@@ -29,7 +29,7 @@ const ItemDetail = ({ data }) => {
           {isInCart(data.id) ? (
             <Link to="/cart">
               <button className="boton">
-                Ir al carrito {" "}
+                Ir al carrito
                 <Icon
                   icon="ant-design:shopping-cart-outlined"
                   className="cart"

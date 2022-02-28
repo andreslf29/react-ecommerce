@@ -8,6 +8,7 @@ import Hero from "./components/Hero";
 import ItemListContainer from "./containers/ItemListContainer";
 import ItemDetailContainer from "./containers/ItemDetailContainer";
 import  {CartContextProvider}  from "./context/CartContext";
+import CartView from "./components/Cart/CartView";
 
 
 function App() {
@@ -24,7 +25,7 @@ function App() {
             element={<ItemListContainer />}
           />
           <Route path="/item/:id" element={<ItemDetailContainer />} />
-          <Route path="/cart" element={<Cart />} />
+          <Route path="/cart" element={<CartView />} />
           <Route path="*" element={<>NOT FOUND</>} />
         </Routes>
         <Footer />

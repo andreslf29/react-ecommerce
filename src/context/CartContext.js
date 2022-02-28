@@ -10,7 +10,7 @@ export function CartContextProvider({ children }) {
   const [itemsInCart, setItemsInCart] = useState([]);
 
   function addItem(data, qty) {
-    setItemsInCart((prevState)=>[...prevState, { ...data, qty }]);
+    setItemsInCart([...itemsInCart, { ...data, qty }]);
   }
 
   function isInCart(id) {
@@ -40,6 +40,14 @@ export function CartContextProvider({ children }) {
     setItemsInCart([]);
   }
 
+  function countItemsInCart() {
+    let total = 0;
+    itemsInCart.forEach( (item) =>{
+      total += item.qty;
+    });
+    return total;
+  }
+
   return (
     <CartContext.Provider
       value={{
@@ -50,6 +58,7 @@ export function CartContextProvider({ children }) {
         removeItemFromCart,
         quantity: 5,
         itemsInCart,
+        countItemsInCart
       }}
     >
       {children}
