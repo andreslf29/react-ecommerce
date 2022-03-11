@@ -1,0 +1,93 @@
+* {
+  margin: 0;
+  padding: 0;
+  color: inherit;
+  text-decoration: none;
+  list-style-type: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+a, p, section, div, main, ul, .container, .container-fluid, .row {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  color: inherit;
+}
+
+a:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+.boton {
+  outline: none;
+  background-color: transparent;
+  margin-top: 1em;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  border: 2px solid #4cc4c8;
+  border-radius: 25px;
+  padding: .5em .75em;
+  font-size: .8rem;
+}
+
+.boton:hover {
+  background-color: #4cc4c8;
+  color: #1e1e1e;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  cursor: pointer;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+.hero {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: left;
+      -ms-flex-align: left;
+          align-items: left;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 5% 10%;
+  background: url("https://i.ibb.co/fn3yqjb/banner.jpg") no-repeat center/cover;
+  height: 100vh;
+  width: 100%;
+  color: #f1f1f1;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  line-height: 3rem;
+  max-width: 40%;
+}
+
+.hero p {
+  margin-top: 1em;
+  font-size: 1.2rem;
+  line-height: 1.4rem;
+  max-width: 40%;
+}
+
+.block {
+  display: block;
+}
+/*# sourceMappingURL=Hero.css.map */

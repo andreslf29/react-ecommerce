@@ -11,6 +11,7 @@ import  {CartContextProvider}  from "./context/CartContext";
 import CartView from "./components/Cart/CartView";
 
 
+
 function App() {
   return (
     <>
@@ -31,6 +32,7 @@ function App() {
         <Footer />
       </BrowserRouter>
       </CartContextProvider>
+      
     </>
   );
 }
