@@ -17,7 +17,7 @@ export default function ItemListContainer() {
 
   //encapsular el llamdo de la promesa en useEffect
   useEffect(() => {
-    let requestDatos = categoryid ? getAllPhones() : getAllPhonesFrom();
+    let requestDatos = categoryid ? getAllPhonesFrom(categoryid)  : getAllPhones();
 
     //ejecuta then despues de la promesa. Guardar los satos recibidos en el estado
     requestDatos
@@ -27,7 +27,6 @@ export default function ItemListContainer() {
       })
   },[categoryid]);
   return (
-    
     <section className="container-fluid row">
       {isLoading ? <Loader />  : <ItemList items={items} />}
     </section>

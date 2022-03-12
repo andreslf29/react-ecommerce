@@ -48,15 +48,24 @@ export function CartContextProvider({ children }) {
     return total;
   }
 
+  function getTotal(){
+    let totalPrice = 0;
+    itemsInCart.forEach((item) => {
+      totalPrice = totalPrice + item.qty * item.precio;
+    });
+    return Number(totalPrice.toFixed(2));
+  }
+
   return (
     <CartContext.Provider
       value={{
         addItem,
         isInCart,
         clearCart,
+        getTotal,
         getItemInCart,
         removeItemFromCart,
-        quantity: 5,
+        //quantity: 5,
         itemsInCart,
         countItemsInCart
       }}

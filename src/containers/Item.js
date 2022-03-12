@@ -5,18 +5,18 @@ import { Link } from "react-router-dom";
 const Item = ({ item }) => {
   return (
     <div className="product__card">
-      <Link to={`/item/${item.id}`}>
-        <img src={`${item.imagen}`} alt="{item.nombre}" />
-      </Link>
+      <img src={`${item.imagen}`} alt="{item.nombre}" />
       <p className="mt-2">{item.marca}</p>
-      <Link to={`/item/${item.id}`}>
-        <h4>{item.nombre}</h4>
-      </Link>
+      <h4>{item.nombre}</h4>
       <p className="description">{item.descripcion}</p>
       <p>${item.precio}</p>
-      <button className="boton">
-        <Link to={`/item/${item.id}`}>Ver más</Link>
-      </button>
+      {item.stock === 0 ? (
+        <p>Agotado</p>
+      ) : (
+        <button className="boton w-100">
+          <Link to={`/item/${item.id}`}>Ver más</Link>
+        </button>
+      )}
     </div>
   );
 };

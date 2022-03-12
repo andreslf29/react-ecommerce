@@ -1,10 +1,10 @@
 import React, { useEffect } from "react";
 import useCartContext from "../../context/CartContext";
 import { Link } from "react-router-dom";
-
+import CartForm from "./CartForm";
 
 function CartView() {
-    const { itemsInCart, removeItemFromCart, clearCart } = useCartContext();
+    const { itemsInCart, removeItemFromCart, clearCart, getTotal } = useCartContext();
 
     if(itemsInCart.length === 0){
         return (
@@ -48,9 +48,14 @@ function CartView() {
                 }
               </tbody>
             </table>
+            <p>Total de la compra: ${getTotal()}</p>
           </div>
           <button onClick={() => clearCart()}>Limpiar</button>
-          <button onClick={() => alert("Compra exitosa")}>Pagar</button>
+
+          <Link to="/checkout">
+            <button>Pagar</button>
+          </Link>
+
             </>
             
           )

@@ -20,6 +20,7 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 export const db = getFirestore(app);
+
 export async function getAllPhones(){
   try{
     const data = collection(db,"phones");
@@ -52,3 +53,5 @@ export async function getAllPhonesFrom(marca){
     console.error(err);
   }
 }
+
+

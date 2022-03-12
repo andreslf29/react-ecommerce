@@ -27,27 +27,33 @@ const ItemDetail = ({ data }) => {
           <p className="precio">${precio}</p>
           <p className="mb-1">Stock: {stock}</p>
           {isInCart(data.id) ? (
-            <Link to="/cart">
-              <button className="boton">
-                Ir al carrito
-                <Icon
-                  icon="ant-design:shopping-cart-outlined"
-                  className="cart"
-                />
+            <div>
+              <Link to="/cart">
+                <button className="boton">
+                  Ir al carrito
+                  <Icon
+                    icon="ant-design:shopping-cart-outlined"
+                    className="cart"
+                  />
+                </button>
+              </Link>
+              <button onClick={() => removeItemFromCart(data.id)}>
+                <Icon icon="ep:delete" />
               </button>
-            </Link>
+              <Link to="/">
+                <button>Seguir Comprando</button>
+              </Link>
+              {/**             
+            <button onClick={() => clearCart()}>Limpiar</button>*/}
+            </div>
           ) : (
             <ItemCount stock={stock} initial={1} onAdd={onAdd} />
           )}
-          <button onClick={() => removeItemFromCart(data.id)}>Eliminar</button>
-          <button onClick={() => clearCart()}>Limpiar</button>
         </div>
       </div>
     );
   } else {
-    return (
-      <h1>Producto no disponible</h1>
-    )
+    return <h1>Producto no disponible</h1>;
   }
 };
 
