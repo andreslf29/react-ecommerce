@@ -37,14 +37,15 @@ const ItemDetail = ({ data }) => {
                   />
                 </button>
               </Link>
-              <button onClick={() => removeItemFromCart(data.id)}>
+              <Link to="/">
+                <button className="boton__alert mx-2">Seguir Comprando</button>
+              </Link>
+              <button
+                className="boton"
+                onClick={() => removeItemFromCart(data.id)}
+              >
                 <Icon icon="ep:delete" />
               </button>
-              <Link to="/">
-                <button>Seguir Comprando</button>
-              </Link>
-              {/**             
-            <button onClick={() => clearCart()}>Limpiar</button>*/}
             </div>
           ) : (
             <ItemCount stock={stock} initial={1} onAdd={onAdd} />

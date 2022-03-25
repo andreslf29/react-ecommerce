@@ -1,0 +1,76 @@
+@import 'vars';
+
+.form__cart--container{
+    height: auto;
+    padding: 5% 10%;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    
+
+}
+
+.campo__form{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto 1em;
+    
+
+    input{
+        width: 100%;
+        border: 1px solid $azul;
+        padding: .5em .75em;
+        border-radius: 15px;
+        outline: none;
+
+        &:focus{
+            border: 1px solid $gris;
+        }
+    }
+}
+
+.button {
+    display: block;
+    margin: 0 auto;
+    margin-top: 50px;
+    border-radius: 6px;
+    padding: 20px;
+  }
+  
+  .modal-background {
+    position: fixed;
+    pointer-events: none;
+    right: 0;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(10, 10, 10, 0.86);
+  }
+  
+  .modal-card {
+    margin: 0 auto;
+    display: flex;
+    pointer-events: all;
+    z-index: 100;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 5%;
+    margin-top: 150px;
+    width: auto;
+    max-width: 400px;
+    height: auto;
+    background-color: $blanco;
+    border-radius: 15px;
+
+    h2{
+        text-align: center;
+        margin-bottom: 1em;
+    }
+
+    p{
+        text-align: center;
+    }
+  }

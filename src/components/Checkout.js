@@ -1,13 +1,12 @@
-import React from 'react'
-import CartForm from './Cart/CartForm'
+import React from "react";
+import CartForm from "./Cart/CartForm";
 
 function Checkout() {
   return (
     <div>
-        <CartForm />
-    
+      <CartForm />
     </div>
-  )
+  );
 }
 
-export default Checkout
+export default Checkout;

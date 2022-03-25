@@ -22,3 +22,27 @@
         transition: all .2s ease-in-out;
     }
 }
+
+.boton__alert{
+    outline: none;
+    background-color: $azul;
+    margin-top: 1em;
+    width: fit-content;
+    border: 2px solid $azul;
+    border-radius: 25px;
+    padding: .5em .75em;
+    font-size: .8rem;
+    color: $negro;
+
+    &:hover{
+        background-color: $negro;
+        color: $blanco;
+        transform: scale(1.05);
+        cursor: pointer;
+        transition: all .2s ease-in-out;
+    }
+}
+
+.bold{
+    font-weight: 700;
+}

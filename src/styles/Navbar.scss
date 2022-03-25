@@ -2,6 +2,7 @@
 
 .nav{
     @include dja(center, center);
+    position: relative;
 }
 .nav ul{
     @include dja(center, center);
@@ -65,4 +66,15 @@
             transform: scaleX(1);
         }
     }
+}
+
+#navbarNav{
+    @media (max-width: 1200px) { 
+        background-color: $negro;
+        position: fixed;
+        top: 5em;
+        left: 0  !important;
+        width: 100%  !important;
+     }
+    
 }
