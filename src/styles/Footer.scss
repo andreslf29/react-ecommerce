@@ -1,0 +1,38 @@
+@import 'vars', 'mixin';
+
+.footer{
+    @include dja(space-around, center);
+    background-color: $negro;
+    box-shadow: $shadow;
+    width: 100%;
+    padding: 2.5% 5% !important;
+
+    p{
+        color: $blanco;
+    }
+
+    .iconos{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2rem;
+        color: $azul;
+
+        &>*{
+            margin: .25em;
+        }
+        
+    }
+}
+
+.finalfooter{
+    @include dja(center, center);
+    background-color: $azul;
+    color: $negro;
+    width: 100%;
+    padding: .5em 5%;
+
+    a{
+        margin-left: .5em;
+    }
+}

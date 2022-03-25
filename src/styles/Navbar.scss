@@ -1,0 +1,80 @@
+@import '_vars', '_mixin';
+
+.nav{
+    @include dja(center, center);
+    position: relative;
+}
+.nav ul{
+    @include dja(center, center);
+    color: $blanco;
+    font-size: 1.1rem;
+    line-height: 1.1rem;
+
+    a{
+        margin: 0 .5em;
+    }
+}
+
+.link {
+    display: inline-block;
+    position: relative;
+    text-decoration: none;
+    padding: 10px 0;
+}
+
+.link-wrapper {
+    position: relative;
+    display: block;
+    padding: 20px 0;
+}
+
+.hover-blue {
+    &:before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 50%;
+        height: 3px;
+        background-color: $azul;
+        transform: scaleX(0);
+        transform-origin: bottom left;
+
+        transition: transform 0.3s;
+    }
+
+    &:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        left : 50%;
+        height: 3px;
+        background-color: $azul;
+        transform: scaleX(0);
+        transform-origin: bottom right;
+
+        transition: transform 0.3s;
+    }
+
+    &:hover {
+        &:before {
+            transform: scaleX(1);
+        }
+
+        &:after {
+            transform: scaleX(1);
+        }
+    }
+}
+
+#navbarNav{
+    @media (max-width: 1200px) { 
+        background-color: $negro;
+        position: fixed;
+        top: 5em;
+        left: 0  !important;
+        width: 100%  !important;
+     }
+    
+}

@@ -1,0 +1,38 @@
+$negro: #1e1e1e;
+$blanco: #f1f1f1;
+$azul: #4cc4c8;
+$gris: #7a7a7a;
+$gradiente: linear-gradient(145deg, #0BA7D9 0%, #03b5ac 100%);
+$shadow: 0px 0px 10px rgba(0,0,0,0.15);
+
+* {
+    margin: 0;
+    padding: 0;
+    color: inherit;
+    text-decoration: none;
+    list-style-type: none;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+  }
+
+a, p, section,div, main,ul, .container, .container-fluid, .row {
+        margin: 0;
+        padding: 0;
+        text-decoration: none;
+        border: none;
+        outline: none;
+        color: inherit;
+}
+
+a:hover{
+    text-decoration: none;
+    color: inherit;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
