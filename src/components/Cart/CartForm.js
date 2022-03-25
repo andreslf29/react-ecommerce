@@ -98,15 +98,22 @@ const CartForm = () => {
         <div className="modal-background" onClick={handleModalClose}>
           <div className="modal-card">
             {errorMail ? (
-              "REVISE LOS MAILS"
+              <>
+                <h6>Los email no coinciden</h6>
+                <button className="boton" onClick={() => setShow(false)}>
+                  Aceptar
+                </button>
+              </>
             ) : (
               <>
                 <h2>Gracias por tu compra</h2>
-                <h2>{buyer.orderId}</h2>
-
                 <p>
-                  Pronto estaremos en contacto contigo para programar el envío y
-                  método de pago.
+                  Código de orden: <span className="bold">{buyer.orderId}</span>
+                </p>
+
+                <p className="mt-3">
+                  Pronto nos contáctaremos para programar el envío y método de
+                  pago.
                 </p>
                 <Link to="/" className="boton">
                   Ir al Inicio
